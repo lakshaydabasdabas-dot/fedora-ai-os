@@ -1,0 +1,5 @@
+{"timestamp": "2026-06-05T06:30:40.598606", "event": "STEP_START", "step": "step1_success", "details": {"attempt": 0}}
+{"timestamp": "2026-06-05T06:30:40.598723", "event": "STEP_SUCCESS", "step": "step1_success", "details": {}}
+{"timestamp": "2026-06-05T06:30:40.602520", "event": "STEP_START", "step": "step2_buggy_comp", "details": {"attempt": 0}}
+{"timestamp": "2026-06-05T06:30:40.602610", "event": "STEP_SUCCESS", "step": "step2_buggy_comp", "details": {}}
+{"timestamp": "2026-06-05T06:30:40.604691", "event": "STEP_START", "step": "step3_fatal", "details": {"attempt": 0}}

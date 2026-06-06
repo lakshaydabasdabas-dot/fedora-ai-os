@@ -1,0 +1,4 @@
+{"timestamp": "2026-06-05T07:19:15.715510", "event": "STEP_START", "step": "mock_install", "details": {"attempt": 0}}
+{"timestamp": "2026-06-05T07:19:15.715690", "event": "STEP_SUCCESS", "step": "mock_install", "details": {}}
+{"timestamp": "2026-06-05T07:19:15.717668", "event": "STEP_START", "step": "wait_for_approval", "details": {"attempt": 0}}
+{"timestamp": "2026-06-05T07:19:15.717748", "event": "STEP_SUSPEND", "step": "wait_for_approval", "details": {"type": "file", "target": "phase0/v3_data/approval.sig"}}
