@@ -1,6 +1,6 @@
 # Fedora AI OS — Roadmap
 
-Last updated: 2026-06-07
+Last updated: 2026-06-08
 Driven by implementation state, not architecture documents.
 
 ---

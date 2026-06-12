@@ -2,9 +2,8 @@
   "data": {},
   "next_step_index": 2,
   "completed_steps": [
-    "podman_image_pull",
     "podman_container_create"
   ],
   "is_complete": false,
-  "run_id": "20260605-065212"
+  "run_id": "20260609-162515"
 }

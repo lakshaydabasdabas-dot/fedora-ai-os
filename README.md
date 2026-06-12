@@ -36,15 +36,18 @@ The project is currently focused on maturing its core components and integrating
 
 ## Project Structure:
 
-*   **`code/`**: Contains the core implementation codebase for Fedora AI OS.
-    *   `code/implementation/` (and its subdirectories like `phase0/`)
-*   **`docs/`**: Contains documentation related to the project.
-    *   `docs/proposals/` (Architectural blueprints and future ideas)
-    *   `docs/built/` (Documentation of implemented features and progress)
+*   **`implementation_code/`**: All live code.
+    *   `implementation_code/phase0/` — Workflow engine (v2/v3, complete and chaos-tested)
+    *   `implementation_code/phase1/` — MCP Gateway, LangGraph bridge, and future components
+*   **`project_state/`**: Source of truth — authoritative project documents (5 files).
+*   **`roles/`**: Team assignments for all 4 contributors.
+*   **`proposals/`**: Architecture blueprints and reference documents (not implementation state).
+*   **`aios_done/`**: Historical/completed milestone documentation.
 
 ## Next Steps:
 
-The project is moving towards V2 of its development, aiming to expand intelligence, memory capabilities, and community integration. Specific next steps will involve refining the plugin architecture and further developing agentic functionalities.
+The current critical path is building the **MCP Gateway Core Proxy** — the central routing layer that every agent uses to talk to external tools. See `project_state/CRITICAL_PATH.md` for details and `project_state/NEXT_ACTIONS.md` for the full 20-task queue.
 
 ---
 * *This README was generated based on our project discussions and reviewed documentation.*
+

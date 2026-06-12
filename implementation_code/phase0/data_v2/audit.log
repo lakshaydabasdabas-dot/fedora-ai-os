@@ -1,4 +1,4 @@
-{"timestamp": "2026-06-05T06:19:41.847751", "event": "STEP_START", "step": "zombie_lock", "details": {"attempt": 0}}
-{"timestamp": "2026-06-05T06:19:41.847868", "event": "CMD_START", "step": "zombie_lock", "details": {"cmd": "echo $PPID > phase0/data_v2/zombie.lock && sleep 60 && echo 'done' > phase0/data_v2/zombie_final.txt && rm phase0/data_v2/zombie.lock"}}
-{"timestamp": "2026-06-05T06:19:48.855386", "event": "STEP_START", "step": "zombie_lock", "details": {"attempt": 1}}
-{"timestamp": "2026-06-05T06:19:50.855981", "event": "STEP_START", "step": "zombie_lock", "details": {"attempt": 2}}
+{"timestamp": "2026-06-09T16:26:09.774069", "event": "STEP_START", "step": "zombie_lock", "details": {"attempt": 0}}
+{"timestamp": "2026-06-09T16:26:09.774273", "event": "CMD_START", "step": "zombie_lock", "details": {"cmd": "echo $PPID > phase0/data_v2/zombie.lock && sleep 60 && echo 'done' > phase0/data_v2/zombie_final.txt && rm phase0/data_v2/zombie.lock"}}
+{"timestamp": "2026-06-09T16:26:16.784780", "event": "STEP_START", "step": "zombie_lock", "details": {"attempt": 1}}
+{"timestamp": "2026-06-09T16:26:18.785176", "event": "STEP_START", "step": "zombie_lock", "details": {"attempt": 2}}

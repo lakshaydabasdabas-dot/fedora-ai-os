@@ -1,7 +1,7 @@
 # Fedora AI OS — Current State
 
-Last updated: 2026-06-07
-Source of truth: `implementation/phase0/` code + `aios_done/` documents
+Last updated: 2026-06-08
+Source of truth: `implementation_code/phase0/` code + `aios_done/` documents
 
 ---
 
@@ -69,6 +69,7 @@ Every component from the v4 ACTIONABLE blueprint above the workflow engine layer
 
 - LangGraph integration
 - MCP Gateway (proxy, OAuth, schema validation, circuit breaker)
+- Knowledge Infrastructure (docs2db integration)
 - All specialist agents: CEO, Security, Memory, Desktop, Runtime, Semantic, Demo Learn
 - Reflex Runtime (DBus, <100ms operations)
 - Goose integration
@@ -83,7 +84,7 @@ Every component from the v4 ACTIONABLE blueprint above the workflow engine layer
 - Plugin marketplace
 - Typed inter-agent contracts (protobuf)
 - Habit inference module
-- Semantic memory / vector store
+- Knowledge Infrastructure (docs2db integration for ingestion/embedding/RAG)
 
 ---
 
@@ -109,7 +110,7 @@ Nothing is technically blocked. All planned next steps (MCP Gateway, LangGraph) 
 ## Existing Code Components
 
 ```
-implementation/phase0/
+implementation_code/phase0/
 ├── v2_engine.py                    # Core engine v2 (249 lines)
 ├── v3_engine.py                    # Core engine v3 with suspend (267 lines)
 ├── recoverable_workflow.py         # Phase 1 workflow (185 lines)

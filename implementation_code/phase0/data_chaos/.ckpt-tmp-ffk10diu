@@ -1,0 +1,11 @@
+{
+  "data": {},
+  "next_step_index": 3,
+  "completed_steps": [
+    "step_000",
+    "step_001",
+    "step_002"
+  ],
+  "is_complete": false,
+  "run_id": "20260609-162504"
+}

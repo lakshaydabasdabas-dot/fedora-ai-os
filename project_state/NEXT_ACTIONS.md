@@ -1,6 +1,6 @@
 # Fedora AI OS — Next Actions (Active Task Queue)
 
-Last updated: 2026-06-07
+Last updated: 2026-06-08
 Ordered by dependency graph, not importance.
 Mark tasks `[ ]` → `[x]` when completed.
 
@@ -11,7 +11,7 @@ Mark tasks `[ ]` → `[x]` when completed.
 **Reason:** First line of code for the next layer. Nothing depends on this — it's the new foundation.
 **Depends on:** Nothing
 **Acceptance Criteria:**
-- Python project at `implementation/phase1/mcp-gateway/` with pyproject.toml
+- Python project at `implementation_code/phase1/mcp-gateway/` with pyproject.toml
 - Dependencies: mcp (Python SDK), httpx
 - `gateway serve` command starts HTTP server on configurable port
 - Health endpoint returns 200
@@ -39,7 +39,7 @@ Mark tasks `[ ]` → `[x]` when completed.
 **Reason:** Every other component needs audit logging. Build this early so every subsequent task can log to it.
 **Depends on:** Nothing (use existing AuditLogger pattern from v2_engine.py)
 **Acceptance Criteria:**
-- `implementation/phase1/audit_memory/` Python package
+- `implementation_code/phase1/audit_memory/` Python package
 - Append-only SQLite with schema: id, timestamp, agent_id, event_type, payload (JSON)
 - Read API: query by agent, event_type, time range
 - Immutability: no UPDATE or DELETE operations
@@ -136,7 +136,7 @@ Mark tasks `[ ]` → `[x]` when completed.
 **Reason:** Next major integration point after MCP Gateway.
 **Depends on:** Task 2 (MCP Gateway proxy)
 **Acceptance Criteria:**
-- `implementation/phase1/langgraph-bridge/` Python package
+- `implementation_code/phase1/langgraph-bridge/` Python package
 - Dependencies: langgraph, langgraph-checkpoint-sqlite
 - Loads existing v3 workflow steps as LangGraph nodes
 - Minimal graph: sequential node chain
@@ -189,7 +189,7 @@ Mark tasks `[ ]` → `[x]` when completed.
 **Reason:** Desktop automation needs a fast, LLM-free path for basic operations.
 **Depends on:** Nothing (standalone)
 **Acceptance Criteria:**
-- `implementation/phase1/reflex-runtime/reflexd.py`
+- `implementation_code/phase1/reflex-runtime/reflexd.py`
 - Systemd user service: `reflex-runtime.service`
 - DBus methods: mute, unmute, set_volume(0-100), switch_workspace(N)
 - Sub-100ms response measured and verified
@@ -249,7 +249,7 @@ Mark tasks `[ ]` → `[x]` when completed.
 - Dashboard: Gateway request rate, latency p50/p95/p99, error rate
 - Dashboard: Workflow step success rate, retry distribution
 - Dashboard: Backend health status
-- JSON dashboard definitions in `implementation/phase1/grafana/dashboards/`
+- JSON dashboard definitions in `implementation_code/phase1/grafana/dashboards/`
 **Estimate:** 2 days | **Role:** Observability
 
 ---

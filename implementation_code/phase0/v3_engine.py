@@ -238,7 +238,7 @@ class Orchestrator:
         # Note: --resume is handled by the workflow script's main
         resume_cmd = f"{sys.executable} {script_path} --resume"
         
-        srun_base = ["systemd-run", "--user", f"--unit={unit_name}", "--remain-after-exit"]
+        srun_base = ["systemd-run", "--user", f"--unit={unit_name}", "--remain-after-exit", f"--property=WorkingDirectory={os.getcwd()}"]
         
         if si.condition_type == "file":
             target_path = os.path.abspath(si.target)

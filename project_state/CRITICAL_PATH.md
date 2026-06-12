@@ -1,6 +1,6 @@
 # Fedora AI OS — Critical Path
 
-Last updated: 2026-06-07
+Last updated: 2026-06-08
 Purpose: Narrow the decision space. This file exists so Hermes always knows the ONE thing to build next and what to avoid.
 
 ---
@@ -32,7 +32,7 @@ The workflow engine proved we can run steps reliably. Now we prove we can route 
 
 These are the gates. Nothing else ships until these work:
 
-- **MCP Gateway scaffold** — `implementation/phase1/mcp-gateway/`, pyproject.toml, `gateway serve`, health endpoint
+- **MCP Gateway scaffold** — `implementation_code/phase1/mcp-gateway/`, pyproject.toml, `gateway serve`, health endpoint
 - **MCP Gateway core proxy** — accept JSON-RPC, route to backend, forward response, YAML config
 - **MCP Gateway schema validation** — reject malformed requests before they reach backends
 
@@ -62,7 +62,7 @@ If a task is on this list, it is explicitly blocked. Do not work on it. Point th
 A user can:
 
 ```bash
-cd implementation/phase1/mcp-gateway
+cd implementation_code/phase1/mcp-gateway
 pip install -e .
 gateway serve &
 curl -X POST http://localhost:8000/mcp -H 'Content-Type: application/json' \
@@ -82,7 +82,7 @@ When Hermes makes any decision about what to build, fix, or plan:
 2. **CRITICAL_PATH.md** (this file) — what matters right now, what's blocked
 3. **NEXT_ACTIONS.md** — concrete tasks with acceptance criteria
 4. **ROADMAP.md** — long-term direction and phase boundaries
-5. **Architecture docs** (aios/, aios_done/) — reference only, not decision input
+5. **Architecture docs** (proposals/, aios_done/) — reference only, not decision input
 
 ### Rules
 
