@@ -3,6 +3,14 @@ from fastapi.responses import JSONResponse
 
 app = FastAPI(title="MCP Gateway Server")
 
+# Load config on startup
+from mcp_gateway.config import load_config
+try:
+    backends = load_config("config.yaml")
+    print(f"Loaded {len(backends)} backends from config.")
+except Exception as e:
+    print(f"Warning during startup: {e}")
+
 @app.get("/health")
 async def health():
     return {"status": "healthy"}
