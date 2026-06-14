@@ -1,0 +1,8 @@
+backends:
+  - name: echo
+    url: http://localhost:8001
+    prefix: echo
+    timeout: 10
+  - name: mock
+    url: http://localhost:8002
+    timeout: 30
